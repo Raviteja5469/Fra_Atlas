@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated theme for FRA Atlas with earthy government tones */
+  --background: oklch(0.98 0.005 120);
+  --foreground: oklch(0.2 0.01 140);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.01 140);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.01 140);
+  --primary: oklch(0.42 0.12 155); /* Forest Green */
+  --primary-foreground: oklch(0.98 0.005 120);
+  --secondary: oklch(0.48 0.08 60); /* Earth Brown */
+  --secondary-foreground: oklch(0.98 0.005 120);
+  --muted: oklch(0.94 0.01 120);
+  --muted-foreground: oklch(0.5 0.01 140);
+  --accent: oklch(0.55 0.15 230); /* Sky Blue */
+  --accent-foreground: oklch(0.98 0.005 120);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 120);
+  --border: oklch(0.88 0.01 120);
+  --input: oklch(0.88 0.01 120);
+  --ring: oklch(0.42 0.12 155);
+  --chart-1: oklch(0.42 0.12 155); /* Forest Green */
+  --chart-2: oklch(0.55 0.15 230); /* Sky Blue */
+  --chart-3: oklch(0.48 0.08 60); /* Earth Brown */
+  --chart-4: oklch(0.65 0.18 140); /* Light Green */
+  --chart-5: oklch(0.45 0.1 40); /* Warm Brown */
+  --radius: 0.75rem;
+  --sidebar: oklch(0.98 0.005 120);
+  --sidebar-foreground: oklch(0.2 0.01 140);
+  --sidebar-primary: oklch(0.42 0.12 155);
+  --sidebar-primary-foreground: oklch(0.98 0.005 120);
+  --sidebar-accent: oklch(0.94 0.01 120);
+  --sidebar-accent-foreground: oklch(0.2 0.01 140);
+  --sidebar-border: oklch(0.88 0.01 120);
+  --sidebar-ring: oklch(0.42 0.12 155);
+}
+
+.dark {
+  /* Dark mode with professional government aesthetic */
+  --background: oklch(0.15 0.01 140);
+  --foreground: oklch(0.95 0.005 120);
+  --card: oklch(0.18 0.01 140);
+  --card-foreground: oklch(0.95 0.005 120);
+  --popover: oklch(0.18 0.01 140);
+  --popover-foreground: oklch(0.95 0.005 120);
+  --primary: oklch(0.55 0.15 155); /* Lighter Forest Green */
+  --primary-foreground: oklch(0.15 0.01 140);
+  --secondary: oklch(0.58 0.1 60); /* Lighter Earth Brown */
+  --secondary-foreground: oklch(0.15 0.01 140);
+  --muted: oklch(0.22 0.01 140);
+  --muted-foreground: oklch(0.65 0.01 120);
+  --accent: oklch(0.65 0.18 230); /* Lighter Sky Blue */
+  --accent-foreground: oklch(0.15 0.01 140);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.95 0.005 120);
+  --border: oklch(0.25 0.01 140);
+  --input: oklch(0.25 0.01 140);
+  --ring: oklch(0.55 0.15 155);
+  --chart-1: oklch(0.55 0.15 155);
+  --chart-2: oklch(0.65 0.18 230);
+  --chart-3: oklch(0.58 0.1 60);
+  --chart-4: oklch(0.7 0.2 140);
+  --chart-5: oklch(0.55 0.12 40);
+  --sidebar: oklch(0.18 0.01 140);
+  --sidebar-foreground: oklch(0.95 0.005 120);
+  --sidebar-primary: oklch(0.55 0.15 155);
+  --sidebar-primary-foreground: oklch(0.15 0.01 140);
+  --sidebar-accent: oklch(0.22 0.01 140);
+  --sidebar-accent-foreground: oklch(0.95 0.005 120);
+  --sidebar-border: oklch(0.25 0.01 140);
+  --sidebar-ring: oklch(0.55 0.15 155);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+.bg-topo {
+  background-image: url('/topography.svg');
+}
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.leaflet-container {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  border-radius: 0.75rem;
+}
+
+.leaflet-container.zooming {
+  opacity: 0.75;
+  transform: scale(0.98);
+}
+
+
+/* Next.js root element can also cause overflow — guard it */
+#__next {
+  overflow-x: hidden;
+}
+
+/* Global box-sizing and safeguards for images/SVGs that might exceed viewport */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Strong global guard: prevent any element from being wider than the viewport
+   (keeps interactive/absolute elements from creating a horizontal gap) */
+html, body, #__next, body > * {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  /* ensure elements are not positioned outside the viewport */
+  position: relative;
+}
+
+/* Defensive: ensure html/body can't be scrolled horizontally under any circumstance */
+html, body, #__next {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* EMERGENCY clamp: prevent any element from exceeding viewport width.
+   This is intentionally aggressive and should be narrowed after verification. */
+    * {
+      max-width: 100vw !important;
+    }
+
+    *:before, *:after {
+      max-width: 100vw !important;
+    }

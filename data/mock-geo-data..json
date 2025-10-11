@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.1863, 21.8045]
+      },
+      "properties": {
+        "village": "Rampur",
+        "district": "Balaghat",
+        "state": "Madhya Pradesh",
+        "coordinates": "21.8045° N, 80.1863° E",
+        "claims": { "total": 234, "granted": 189, "pending": 45 },
+        "area": { "total": "1,245 ha", "ifr": "845 ha", "cfr": "400 ha" },
+        "schemes": ["PM-KISAN", "Jal Jeevan Mission", "MGNREGA"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2500, 21.8500]
+      },
+      "properties": {
+        "village": "Sitapur",
+        "district": "Balaghat",
+        "state": "Madhya Pradesh",
+        "coordinates": "21.8500° N, 80.2500° E",
+        "claims": { "total": 150, "granted": 100, "pending": 50 },
+        "area": { "total": "900 ha", "ifr": "600 ha", "cfr": "300 ha" },
+        "schemes": ["MGNREGA"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.1500, 21.7500]
+      },
+      "properties": {
+        "village": "Gopalganj",
+        "district": "Balaghat",
+        "state": "Madhya Pradesh",
+        "coordinates": "21.7500° N, 80.1500° E",
+        "claims": { "total": 300, "granted": 250, "pending": 50 },
+        "area": { "total": "1500 ha", "ifr": "1000 ha", "cfr": "500 ha" },
+        "schemes": ["PM-KISAN", "Jal Jeevan Mission"]
+      }
+    }
+  ]
+}
