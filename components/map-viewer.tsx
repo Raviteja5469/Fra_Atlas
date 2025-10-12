@@ -4,10 +4,19 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ZoomIn, ZoomOut, Maximize2, Download, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
 import L from 'leaflet'
-import geoData from "@/data/mock-geo-data..json" // Make sure this path is correct
+import { useMapLayers } from "@/contexts/MapLayerContext"
+
+// Import layer data - Real Indian state data
+import ifrData from "@/data/ifr-boundaries-real.json"
+import cfrData from "@/data/cfr-areas-real.json"
+import crData from "@/data/community-rights-real.json"
+import villageData from "@/data/village-boundaries-real.json"
+import forestData from "@/data/forest-areas-real.json"
+import waterData from "@/data/water-bodies-real.json"
+import infrastructureData from "@/data/infrastructure-real.json"
 
 // Fix for default Leaflet icon not showing up correctly
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -17,8 +26,118 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
 });
 
+// Layer styles
+const layerStyles = {
+  ifr: {
+    color: '#e74c3c',
+    weight: 2,
+    fillOpacity: 0.3
+  },
+  cfr: {
+    color: '#3498db',
+    weight: 2,
+    fillOpacity: 0.3
+  },
+  cr: {
+    color: '#f39c12',
+    weight: 2,
+    fillOpacity: 0.3
+  },
+  villages: {
+    color: '#27ae60',
+    weight: 1,
+    fillOpacity: 0.2
+  },
+  forest: {
+    color: '#2ecc71',
+    weight: 1,
+    fillOpacity: 0.2
+  },
+  water: {
+    color: '#3498db',
+    weight: 2,
+    fillOpacity: 0.4
+  },
+  infrastructure: {
+    color: '#8e44ad',
+    weight: 1,
+    fillOpacity: 0.6
+  }
+}
+
+// Layer component that updates when layer state changes
+function LayerComponent({ layerId, data, style }: { layerId: string, data: any, style: any }) {
+  const { layers } = useMapLayers()
+  
+  const layer = layers.find(l => l.id === layerId)
+  const isEnabled = layer?.enabled ?? false
+  const opacity = layer?.opacity ?? 100
+
+  // Memoize dynamic style to prevent unnecessary re-renders
+  const dynamicStyle = useMemo(() => ({
+    ...style,
+    opacity: isEnabled ? opacity / 100 : 0,
+    fillOpacity: isEnabled ? (style.fillOpacity * opacity) / 100 : 0,
+    weight: style.weight,
+    color: style.color
+  }), [style, isEnabled, opacity])
+
+  // Don't render if layer is disabled
+  if (!isEnabled) return null
+
+  return (
+    <GeoJSON
+      data={data}
+      style={dynamicStyle}
+      onEachFeature={(feature, layer) => {
+        layer.on({
+          click: () => {
+            // Handle layer-specific clicks with detailed information
+            const props = feature.properties
+            console.log(`${layerId} clicked:`, props)
+            
+            // Create detailed popup content based on layer type
+            let popupContent = `<div class="p-2">
+              <h3 class="font-semibold text-lg mb-2">${props.name}</h3>
+              <p class="text-sm text-gray-600 mb-1"><strong>State:</strong> ${props.state}</p>`
+            
+            if (props.district) {
+              popupContent += `<p class="text-sm text-gray-600 mb-1"><strong>District:</strong> ${props.district}</p>`
+            }
+            
+            if (props.area_hectares) {
+              popupContent += `<p class="text-sm text-gray-600 mb-1"><strong>Area:</strong> ${props.area_hectares} hectares</p>`
+            }
+            
+            if (props.claims_total) {
+              popupContent += `<div class="mt-2">
+                <p class="text-sm font-medium">FRA Claims:</p>
+                <p class="text-xs">Total: ${props.claims_total} | Granted: ${props.claims_granted} | Pending: ${props.claims_pending}</p>
+              </div>`
+            }
+            
+            if (props.population) {
+              popupContent += `<p class="text-sm text-gray-600 mb-1"><strong>Population:</strong> ${props.population}</p>`
+            }
+            
+            if (props.tribal_groups) {
+              popupContent += `<p class="text-sm text-gray-600 mb-1"><strong>Tribal Groups:</strong> ${Array.isArray(props.tribal_groups) ? props.tribal_groups.join(', ') : props.tribal_groups}</p>`
+            }
+            
+            popupContent += `</div>`
+            
+            // Create popup
+            layer.bindPopup(popupContent).openPopup()
+          },
+        })
+      }}
+    />
+  )
+}
+
 export function MapViewer() {
   const [selectedFeature, setSelectedFeature] = useState<any>(null)
+  const { layers } = useMapLayers()
 
   // Function to handle clicks on map features
   const onEachFeature = (feature: any, layer: L.Layer) => {
@@ -36,8 +155,8 @@ export function MapViewer() {
           
           {/* --- Integrated Leaflet Map --- */}
           <MapContainer
-            center={[21.8045, 80.1863]}
-            zoom={11}
+            center={[20.5937, 78.9629]}
+            zoom={5}
             scrollWheelZoom={true}
             style={{ height: '100%', width: '100%' }}
             className="z-0"
@@ -46,7 +165,15 @@ export function MapViewer() {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <GeoJSON data={geoData as any} onEachFeature={onEachFeature} />
+            
+            {/* Layer Components */}
+            <LayerComponent layerId="ifr" data={ifrData} style={layerStyles.ifr} />
+            <LayerComponent layerId="cfr" data={cfrData} style={layerStyles.cfr} />
+            <LayerComponent layerId="cr" data={crData} style={layerStyles.cr} />
+            <LayerComponent layerId="villages" data={villageData} style={layerStyles.villages} />
+            <LayerComponent layerId="forest" data={forestData} style={layerStyles.forest} />
+            <LayerComponent layerId="water" data={waterData} style={layerStyles.water} />
+            <LayerComponent layerId="infrastructure" data={infrastructureData} style={layerStyles.infrastructure} />
           </MapContainer>
 
           {/* --- Your Existing UI Overlays --- */}

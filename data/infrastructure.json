@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.1900, 21.8100]
+      },
+      "properties": {
+        "name": "Road Junction",
+        "type": "infrastructure",
+        "infrastructure_type": "road",
+        "description": "Main road intersection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2000, 21.8200]
+      },
+      "properties": {
+        "name": "School Building",
+        "type": "infrastructure",
+        "infrastructure_type": "building",
+        "description": "Primary school"
+      }
+    }
+  ]
+}

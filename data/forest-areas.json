@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1000, 21.6500],
+          [80.2000, 21.6500],
+          [80.2000, 21.7500],
+          [80.1000, 21.7500],
+          [80.1000, 21.6500]
+        ]]
+      },
+      "properties": {
+        "name": "Dense Forest",
+        "type": "forest",
+        "forest_type": "dense",
+        "area": "5000 ha"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.2000, 21.7500],
+          [80.3000, 21.7500],
+          [80.3000, 21.8500],
+          [80.2000, 21.8500],
+          [80.2000, 21.7500]
+        ]]
+      },
+      "properties": {
+        "name": "Open Forest",
+        "type": "forest",
+        "forest_type": "open",
+        "area": "3000 ha"
+      }
+    }
+  ]
+}

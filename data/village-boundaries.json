@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1850, 21.8030],
+          [80.1870, 21.8030],
+          [80.1870, 21.8060],
+          [80.1850, 21.8060],
+          [80.1850, 21.8030]
+        ]]
+      },
+      "properties": {
+        "name": "Rampur Village",
+        "type": "village",
+        "population": 1200,
+        "area": "50 ha"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.2480, 21.8480],
+          [80.2520, 21.8480],
+          [80.2520, 21.8520],
+          [80.2480, 21.8520],
+          [80.2480, 21.8480]
+        ]]
+      },
+      "properties": {
+        "name": "Sitapur Village",
+        "type": "village",
+        "population": 800,
+        "area": "35 ha"
+      }
+    }
+  ]
+}

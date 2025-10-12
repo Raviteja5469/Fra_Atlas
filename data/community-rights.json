@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1200, 21.7000],
+          [80.1300, 21.7000],
+          [80.1300, 21.7100],
+          [80.1200, 21.7100],
+          [80.1200, 21.7000]
+        ]]
+      },
+      "properties": {
+        "name": "Community Rights Area 1",
+        "type": "cr",
+        "area": "200 ha",
+        "claims": { "total": 100, "granted": 80, "pending": 20 }
+      }
+    }
+  ]
+}

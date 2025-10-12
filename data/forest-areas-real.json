@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.0, 28.0],
+          [78.0, 28.0],
+          [78.0, 29.0],
+          [77.0, 29.0],
+          [77.0, 28.0]
+        ]]
+      },
+      "properties": {
+        "name": "Delhi Forest Reserve",
+        "state": "Delhi",
+        "forest_type": "Tropical Dry Deciduous",
+        "area_hectares": 5000,
+        "canopy_density": "Moderate",
+        "biodiversity_index": "Medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [72.0, 19.0],
+          [73.0, 19.0],
+          [73.0, 20.0],
+          [72.0, 20.0],
+          [72.0, 19.0]
+        ]]
+      },
+      "properties": {
+        "name": "Maharashtra Forest Reserve",
+        "state": "Maharashtra",
+        "forest_type": "Tropical Moist Deciduous",
+        "area_hectares": 15000,
+        "canopy_density": "High",
+        "biodiversity_index": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [88.0, 22.0],
+          [89.0, 22.0],
+          [89.0, 23.0],
+          [88.0, 23.0],
+          [88.0, 22.0]
+        ]]
+      },
+      "properties": {
+        "name": "West Bengal Forest Reserve",
+        "state": "West Bengal",
+        "forest_type": "Tropical Evergreen",
+        "area_hectares": 12000,
+        "canopy_density": "Very High",
+        "biodiversity_index": "Very High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.5, 12.0],
+          [78.5, 12.0],
+          [78.5, 13.0],
+          [77.5, 13.0],
+          [77.5, 12.0]
+        ]]
+      },
+      "properties": {
+        "name": "Karnataka Forest Reserve",
+        "state": "Karnataka",
+        "forest_type": "Tropical Dry Deciduous",
+        "area_hectares": 18000,
+        "canopy_density": "High",
+        "biodiversity_index": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.0, 13.0],
+          [81.0, 13.0],
+          [81.0, 14.0],
+          [80.0, 14.0],
+          [80.0, 13.0]
+        ]]
+      },
+      "properties": {
+        "name": "Tamil Nadu Forest Reserve",
+        "state": "Tamil Nadu",
+        "forest_type": "Tropical Thorn Forest",
+        "area_hectares": 8000,
+        "canopy_density": "Low",
+        "biodiversity_index": "Medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.0, 15.0],
+          [76.0, 15.0],
+          [76.0, 16.0],
+          [75.0, 16.0],
+          [75.0, 15.0]
+        ]]
+      },
+      "properties": {
+        "name": "Goa Forest Reserve",
+        "state": "Goa",
+        "forest_type": "Tropical Evergreen",
+        "area_hectares": 10000,
+        "canopy_density": "Very High",
+        "biodiversity_index": "Very High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [85.0, 20.0],
+          [86.0, 20.0],
+          [86.0, 21.0],
+          [85.0, 21.0],
+          [85.0, 20.0]
+        ]]
+      },
+      "properties": {
+        "name": "Odisha Forest Reserve",
+        "state": "Odisha",
+        "forest_type": "Tropical Moist Deciduous",
+        "area_hectares": 20000,
+        "canopy_density": "High",
+        "biodiversity_index": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.0, 18.0],
+          [79.0, 18.0],
+          [79.0, 19.0],
+          [78.0, 19.0],
+          [78.0, 18.0]
+        ]]
+      },
+      "properties": {
+        "name": "Telangana Forest Reserve",
+        "state": "Telangana",
+        "forest_type": "Tropical Dry Deciduous",
+        "area_hectares": 14000,
+        "canopy_density": "Medium",
+        "biodiversity_index": "Medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [91.0, 23.0],
+          [92.0, 23.0],
+          [92.0, 24.0],
+          [91.0, 24.0],
+          [91.0, 23.0]
+        ]]
+      },
+      "properties": {
+        "name": "Tripura Forest Reserve",
+        "state": "Tripura",
+        "forest_type": "Tropical Evergreen",
+        "area_hectares": 16000,
+        "canopy_density": "Very High",
+        "biodiversity_index": "Very High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.0, 15.0],
+          [75.0, 15.0],
+          [75.0, 16.0],
+          [74.0, 16.0],
+          [74.0, 15.0]
+        ]]
+      },
+      "properties": {
+        "name": "Kerala Forest Reserve",
+        "state": "Kerala",
+        "forest_type": "Tropical Evergreen",
+        "area_hectares": 22000,
+        "canopy_density": "Very High",
+        "biodiversity_index": "Very High"
+      }
+    }
+  ]
+}
