@@ -16,12 +16,6 @@ const SatelliteViewer = dynamic(() => import("@/components/satellite-viewer").th
   loading: () => <div>Loading...</div>
 })
 
-
-// const SatelliteViewer = dynamic(() => import("@/components/satellite-viewer"), {
-//   ssr: false,
-// });
-
-
 export default function AIMappingPage() {
   return (
     <div className="min-h-screen bg-background">
