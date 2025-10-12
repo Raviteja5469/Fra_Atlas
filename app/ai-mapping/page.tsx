@@ -1,11 +1,10 @@
 import { Header } from "@/components/header"
-import { SatelliteViewer } from "@/components/satellite-viewer"
 import { AssetClassification } from "@/components/asset-classification"
 import { ValidationTools } from "@/components/validation-tools"
 import { ChangeDetection } from "@/components/change-detection"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Brain, Download, Share2 } from "lucide-react"
+import { Brain, Download, Share2, Map } from "lucide-react"
 
 export default function AIMappingPage() {
   return (
@@ -43,7 +42,14 @@ export default function AIMappingPage() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="lg:col-span-2 space-y-6">
-            <SatelliteViewer />
+            <Card className="h-[500px] flex items-center justify-center">
+              <div className="text-center">
+                <Map className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+                <h3 className="text-lg font-semibold mb-2">Satellite Viewer</h3>
+                <p className="text-muted-foreground">AI-powered satellite imagery analysis</p>
+                <p className="text-sm text-muted-foreground mt-2">Coming soon...</p>
+              </div>
+            </Card>
           </div>
 
           <div className="space-y-6">

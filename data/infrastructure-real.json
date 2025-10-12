@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.2, 28.6]
+      },
+      "properties": {
+        "name": "Delhi Infrastructure",
+        "state": "Delhi",
+        "infrastructure_type": "Road",
+        "description": "National Highway",
+        "status": "Active",
+        "capacity": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.8, 19.0]
+      },
+      "properties": {
+        "name": "Mumbai Infrastructure",
+        "state": "Maharashtra",
+        "infrastructure_type": "Railway",
+        "description": "Railway Station",
+        "status": "Active",
+        "capacity": "Very High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [88.3, 22.5]
+      },
+      "properties": {
+        "name": "Kolkata Infrastructure",
+        "state": "West Bengal",
+        "infrastructure_type": "Port",
+        "description": "Major Port",
+        "status": "Active",
+        "capacity": "Very High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.6, 12.9]
+      },
+      "properties": {
+        "name": "Bangalore Infrastructure",
+        "state": "Karnataka",
+        "infrastructure_type": "Airport",
+        "description": "International Airport",
+        "status": "Active",
+        "capacity": "Very High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2, 13.0]
+      },
+      "properties": {
+        "name": "Chennai Infrastructure",
+        "state": "Tamil Nadu",
+        "infrastructure_type": "Port",
+        "description": "Major Port",
+        "status": "Active",
+        "capacity": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [75.2, 15.4]
+      },
+      "properties": {
+        "name": "Goa Infrastructure",
+        "state": "Goa",
+        "infrastructure_type": "Airport",
+        "description": "Domestic Airport",
+        "status": "Active",
+        "capacity": "Medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [85.2, 20.2]
+      },
+      "properties": {
+        "name": "Odisha Infrastructure",
+        "state": "Odisha",
+        "infrastructure_type": "Port",
+        "description": "Major Port",
+        "status": "Active",
+        "capacity": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.2, 18.2]
+      },
+      "properties": {
+        "name": "Telangana Infrastructure",
+        "state": "Telangana",
+        "infrastructure_type": "Railway",
+        "description": "Railway Junction",
+        "status": "Active",
+        "capacity": "High"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [91.2, 23.8]
+      },
+      "properties": {
+        "name": "Tripura Infrastructure",
+        "state": "Tripura",
+        "infrastructure_type": "Road",
+        "description": "State Highway",
+        "status": "Active",
+        "capacity": "Medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [74.2, 15.2]
+      },
+      "properties": {
+        "name": "Kerala Infrastructure",
+        "state": "Kerala",
+        "infrastructure_type": "Port",
+        "description": "Major Port",
+        "status": "Active",
+        "capacity": "High"
+      }
+    }
+  ]
+}

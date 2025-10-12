@@ -5,33 +5,10 @@ import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { Slider } from "@/components/ui/slider"
 import { Layers } from "lucide-react"
-import { useState } from "react"
-
-interface Layer {
-  id: string
-  name: string
-  enabled: boolean
-  opacity: number
-}
+import { useMapLayers } from "@/contexts/MapLayerContext"
 
 export function MapLayerControl() {
-  const [layers, setLayers] = useState<Layer[]>([
-    { id: "ifr", name: "IFR Boundaries", enabled: true, opacity: 80 },
-    { id: "cfr", name: "CFR Areas", enabled: true, opacity: 80 },
-    { id: "cr", name: "Community Rights", enabled: false, opacity: 80 },
-    { id: "villages", name: "Village Boundaries", enabled: true, opacity: 60 },
-    { id: "forest", name: "Forest Type / Land Use", enabled: false, opacity: 70 },
-    { id: "water", name: "Water Bodies", enabled: false, opacity: 70 },
-    { id: "infrastructure", name: "Infrastructure", enabled: false, opacity: 70 },
-  ])
-
-  const toggleLayer = (id: string) => {
-    setLayers(layers.map((layer) => (layer.id === id ? { ...layer, enabled: !layer.enabled } : layer)))
-  }
-
-  const updateOpacity = (id: string, opacity: number) => {
-    setLayers(layers.map((layer) => (layer.id === id ? { ...layer, opacity } : layer)))
-  }
+  const { layers, toggleLayer, updateOpacity } = useMapLayers()
 
   return (
     <Card className="w-full">

@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1500, 21.7500],
+          [80.1600, 21.7500],
+          [80.1600, 21.7600],
+          [80.1500, 21.7600],
+          [80.1500, 21.7500]
+        ]]
+      },
+      "properties": {
+        "name": "CFR Area 1",
+        "type": "cfr",
+        "area": "400 ha",
+        "claims": { "total": 300, "granted": 250, "pending": 50 }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1700, 21.7700],
+          [80.1800, 21.7700],
+          [80.1800, 21.7800],
+          [80.1700, 21.7800],
+          [80.1700, 21.7700]
+        ]]
+      },
+      "properties": {
+        "name": "CFR Area 2",
+        "type": "cfr",
+        "area": "300 ha",
+        "claims": { "total": 200, "granted": 150, "pending": 50 }
+      }
+    }
+  ]
+}

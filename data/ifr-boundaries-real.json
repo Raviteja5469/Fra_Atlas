@@ -1,0 +1,130 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.0, 28.0],
+          [78.0, 28.0],
+          [78.0, 29.0],
+          [77.0, 29.0],
+          [77.0, 28.0]
+        ]]
+      },
+      "properties": {
+        "name": "Delhi IFR Area",
+        "state": "Delhi",
+        "district": "New Delhi",
+        "type": "ifr",
+        "area_hectares": 1250,
+        "claims_total": 450,
+        "claims_granted": 380,
+        "claims_pending": 70,
+        "population": 2500,
+        "tribal_groups": ["Gujjar", "Bakarwal"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [72.0, 19.0],
+          [73.0, 19.0],
+          [73.0, 20.0],
+          [72.0, 20.0],
+          [72.0, 19.0]
+        ]]
+      },
+      "properties": {
+        "name": "Mumbai IFR Area",
+        "state": "Maharashtra",
+        "district": "Mumbai",
+        "type": "ifr",
+        "area_hectares": 850,
+        "claims_total": 320,
+        "claims_granted": 280,
+        "claims_pending": 40,
+        "population": 1800,
+        "tribal_groups": ["Warli", "Koli"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [88.0, 22.0],
+          [89.0, 22.0],
+          [89.0, 23.0],
+          [88.0, 23.0],
+          [88.0, 22.0]
+        ]]
+      },
+      "properties": {
+        "name": "Kolkata IFR Area",
+        "state": "West Bengal",
+        "district": "Kolkata",
+        "type": "ifr",
+        "area_hectares": 2100,
+        "claims_total": 680,
+        "claims_granted": 520,
+        "claims_pending": 160,
+        "population": 4200,
+        "tribal_groups": ["Santhal", "Munda"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.5, 12.0],
+          [78.5, 12.0],
+          [78.5, 13.0],
+          [77.5, 13.0],
+          [77.5, 12.0]
+        ]]
+      },
+      "properties": {
+        "name": "Bangalore IFR Area",
+        "state": "Karnataka",
+        "district": "Bangalore Urban",
+        "type": "ifr",
+        "area_hectares": 1800,
+        "claims_total": 520,
+        "claims_granted": 450,
+        "claims_pending": 70,
+        "population": 3200,
+        "tribal_groups": ["Soliga", "Jenukuruba"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.0, 13.0],
+          [81.0, 13.0],
+          [81.0, 14.0],
+          [80.0, 14.0],
+          [80.0, 13.0]
+        ]]
+      },
+      "properties": {
+        "name": "Chennai IFR Area",
+        "state": "Tamil Nadu",
+        "district": "Chennai",
+        "type": "ifr",
+        "area_hectares": 1500,
+        "claims_total": 480,
+        "claims_granted": 400,
+        "claims_pending": 80,
+        "population": 2800,
+        "tribal_groups": ["Irula", "Toda"]
+      }
+    }
+  ]
+}

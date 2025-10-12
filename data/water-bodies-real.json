@@ -1,0 +1,205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.1, 28.6],
+          [77.2, 28.6],
+          [77.2, 28.7],
+          [77.1, 28.7],
+          [77.1, 28.6]
+        ]]
+      },
+      "properties": {
+        "name": "Delhi Water Body",
+        "state": "Delhi",
+        "water_type": "Lake",
+        "area_hectares": 25,
+        "depth_meters": 8,
+        "water_quality": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.8, 19.0],
+          [72.9, 19.1],
+          [73.0, 19.2]
+        ]
+      },
+      "properties": {
+        "name": "Mumbai River",
+        "state": "Maharashtra",
+        "water_type": "River",
+        "length_km": 15,
+        "width_meters": 50,
+        "water_quality": "Moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [88.3, 22.5],
+          [88.4, 22.5],
+          [88.4, 22.6],
+          [88.3, 22.6],
+          [88.3, 22.5]
+        ]]
+      },
+      "properties": {
+        "name": "Kolkata Pond",
+        "state": "West Bengal",
+        "water_type": "Pond",
+        "area_hectares": 40,
+        "depth_meters": 12,
+        "water_quality": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.6, 12.9],
+          [77.7, 13.0],
+          [77.8, 13.1]
+        ]
+      },
+      "properties": {
+        "name": "Bangalore Stream",
+        "state": "Karnataka",
+        "water_type": "Stream",
+        "length_km": 12,
+        "width_meters": 30,
+        "water_quality": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.2, 13.0],
+          [80.3, 13.0],
+          [80.3, 13.1],
+          [80.2, 13.1],
+          [80.2, 13.0]
+        ]]
+      },
+      "properties": {
+        "name": "Chennai Lake",
+        "state": "Tamil Nadu",
+        "water_type": "Lake",
+        "area_hectares": 60,
+        "depth_meters": 15,
+        "water_quality": "Moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [75.2, 15.4],
+          [75.3, 15.5],
+          [75.4, 15.6]
+        ]
+      },
+      "properties": {
+        "name": "Goa River",
+        "state": "Goa",
+        "water_type": "River",
+        "length_km": 20,
+        "width_meters": 80,
+        "water_quality": "Excellent"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [85.2, 20.2],
+          [85.3, 20.2],
+          [85.3, 20.3],
+          [85.2, 20.3],
+          [85.2, 20.2]
+        ]]
+      },
+      "properties": {
+        "name": "Odisha Lake",
+        "state": "Odisha",
+        "water_type": "Lake",
+        "area_hectares": 80,
+        "depth_meters": 18,
+        "water_quality": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.2, 18.2],
+          [78.3, 18.3],
+          [78.4, 18.4]
+        ]
+      },
+      "properties": {
+        "name": "Telangana Stream",
+        "state": "Telangana",
+        "water_type": "Stream",
+        "length_km": 18,
+        "width_meters": 40,
+        "water_quality": "Moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [91.2, 23.8],
+          [91.3, 23.8],
+          [91.3, 23.9],
+          [91.2, 23.9],
+          [91.2, 23.8]
+        ]]
+      },
+      "properties": {
+        "name": "Tripura Pond",
+        "state": "Tripura",
+        "water_type": "Pond",
+        "area_hectares": 35,
+        "depth_meters": 10,
+        "water_quality": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [74.2, 15.2],
+          [74.3, 15.3],
+          [74.4, 15.4]
+        ]
+      },
+      "properties": {
+        "name": "Kerala River",
+        "state": "Kerala",
+        "water_type": "River",
+        "length_km": 25,
+        "width_meters": 60,
+        "water_quality": "Excellent"
+      }
+    }
+  ]
+}

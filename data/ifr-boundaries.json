@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1800, 21.8000],
+          [80.1900, 21.8000],
+          [80.1900, 21.8100],
+          [80.1800, 21.8100],
+          [80.1800, 21.8000]
+        ]]
+      },
+      "properties": {
+        "name": "IFR Area 1",
+        "type": "ifr",
+        "area": "845 ha",
+        "claims": { "total": 234, "granted": 189, "pending": 45 }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.2000, 21.8200],
+          [80.2100, 21.8200],
+          [80.2100, 21.8300],
+          [80.2000, 21.8300],
+          [80.2000, 21.8200]
+        ]]
+      },
+      "properties": {
+        "name": "IFR Area 2",
+        "type": "ifr",
+        "area": "600 ha",
+        "claims": { "total": 150, "granted": 100, "pending": 50 }
+      }
+    }
+  ]
+}

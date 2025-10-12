@@ -1,0 +1,130 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.0, 15.0],
+          [76.0, 15.0],
+          [76.0, 16.0],
+          [75.0, 16.0],
+          [75.0, 15.0]
+        ]]
+      },
+      "properties": {
+        "name": "Goa CFR Area",
+        "state": "Goa",
+        "district": "North Goa",
+        "type": "cfr",
+        "area_hectares": 3200,
+        "claims_total": 1200,
+        "claims_granted": 950,
+        "claims_pending": 250,
+        "population": 8500,
+        "tribal_groups": ["Gowda", "Kunbi"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [85.0, 20.0],
+          [86.0, 20.0],
+          [86.0, 21.0],
+          [85.0, 21.0],
+          [85.0, 20.0]
+        ]]
+      },
+      "properties": {
+        "name": "Odisha CFR Area",
+        "state": "Odisha",
+        "district": "Koraput",
+        "type": "cfr",
+        "area_hectares": 8500,
+        "claims_total": 3200,
+        "claims_granted": 2800,
+        "claims_pending": 400,
+        "population": 15000,
+        "tribal_groups": ["Kondh", "Saura", "Gadaba"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.0, 18.0],
+          [79.0, 18.0],
+          [79.0, 19.0],
+          [78.0, 19.0],
+          [78.0, 18.0]
+        ]]
+      },
+      "properties": {
+        "name": "Telangana CFR Area",
+        "state": "Telangana",
+        "district": "Adilabad",
+        "type": "cfr",
+        "area_hectares": 4200,
+        "claims_total": 1800,
+        "claims_granted": 1500,
+        "claims_pending": 300,
+        "population": 9500,
+        "tribal_groups": ["Gond", "Kolam", "Pardhan"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [91.0, 23.0],
+          [92.0, 23.0],
+          [92.0, 24.0],
+          [91.0, 24.0],
+          [91.0, 23.0]
+        ]]
+      },
+      "properties": {
+        "name": "Tripura CFR Area",
+        "state": "Tripura",
+        "district": "West Tripura",
+        "type": "cfr",
+        "area_hectares": 6800,
+        "claims_total": 2500,
+        "claims_granted": 2200,
+        "claims_pending": 300,
+        "population": 12000,
+        "tribal_groups": ["Tripuri", "Reang", "Chakma"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.0, 15.0],
+          [75.0, 15.0],
+          [75.0, 16.0],
+          [74.0, 16.0],
+          [74.0, 15.0]
+        ]]
+      },
+      "properties": {
+        "name": "Kerala CFR Area",
+        "state": "Kerala",
+        "district": "Wayanad",
+        "type": "cfr",
+        "area_hectares": 5500,
+        "claims_total": 2100,
+        "claims_granted": 1800,
+        "claims_pending": 300,
+        "population": 11000,
+        "tribal_groups": ["Paniya", "Kuruma", "Adiya"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.1, 28.5],
+          [77.2, 28.5],
+          [77.2, 28.6],
+          [77.1, 28.6],
+          [77.1, 28.5]
+        ]]
+      },
+      "properties": {
+        "name": "Delhi Community Rights Area",
+        "state": "Delhi",
+        "type": "cr",
+        "area_hectares": 200,
+        "claims_total": 80,
+        "claims_granted": 65,
+        "claims_pending": 15,
+        "population": 1200,
+        "tribal_groups": ["Gujjar"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [72.7, 18.9],
+          [72.8, 18.9],
+          [72.8, 19.0],
+          [72.7, 19.0],
+          [72.7, 18.9]
+        ]]
+      },
+      "properties": {
+        "name": "Maharashtra Community Rights Area",
+        "state": "Maharashtra",
+        "type": "cr",
+        "area_hectares": 350,
+        "claims_total": 150,
+        "claims_granted": 120,
+        "claims_pending": 30,
+        "population": 2100,
+        "tribal_groups": ["Warli", "Koli"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [88.2, 22.4],
+          [88.3, 22.4],
+          [88.3, 22.5],
+          [88.2, 22.5],
+          [88.2, 22.4]
+        ]]
+      },
+      "properties": {
+        "name": "West Bengal Community Rights Area",
+        "state": "West Bengal",
+        "type": "cr",
+        "area_hectares": 500,
+        "claims_total": 200,
+        "claims_granted": 160,
+        "claims_pending": 40,
+        "population": 3000,
+        "tribal_groups": ["Santhal", "Munda"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.5, 12.8],
+          [77.6, 12.8],
+          [77.6, 12.9],
+          [77.5, 12.9],
+          [77.5, 12.8]
+        ]]
+      },
+      "properties": {
+        "name": "Karnataka Community Rights Area",
+        "state": "Karnataka",
+        "type": "cr",
+        "area_hectares": 400,
+        "claims_total": 180,
+        "claims_granted": 150,
+        "claims_pending": 30,
+        "population": 2500,
+        "tribal_groups": ["Soliga", "Jenukuruba"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [80.1, 12.9],
+          [80.2, 12.9],
+          [80.2, 13.0],
+          [80.1, 13.0],
+          [80.1, 12.9]
+        ]]
+      },
+      "properties": {
+        "name": "Tamil Nadu Community Rights Area",
+        "state": "Tamil Nadu",
+        "type": "cr",
+        "area_hectares": 300,
+        "claims_total": 120,
+        "claims_granted": 100,
+        "claims_pending": 20,
+        "population": 1800,
+        "tribal_groups": ["Irula", "Toda"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [75.1, 15.3],
+          [75.2, 15.3],
+          [75.2, 15.4],
+          [75.1, 15.4],
+          [75.1, 15.3]
+        ]]
+      },
+      "properties": {
+        "name": "Goa Community Rights Area",
+        "state": "Goa",
+        "type": "cr",
+        "area_hectares": 250,
+        "claims_total": 100,
+        "claims_granted": 85,
+        "claims_pending": 15,
+        "population": 1500,
+        "tribal_groups": ["Gowda", "Kunbi"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [85.1, 20.1],
+          [85.2, 20.1],
+          [85.2, 20.2],
+          [85.1, 20.2],
+          [85.1, 20.1]
+        ]]
+      },
+      "properties": {
+        "name": "Odisha Community Rights Area",
+        "state": "Odisha",
+        "type": "cr",
+        "area_hectares": 600,
+        "claims_total": 250,
+        "claims_granted": 200,
+        "claims_pending": 50,
+        "population": 3500,
+        "tribal_groups": ["Kondh", "Saura", "Gadaba"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.1, 18.1],
+          [78.2, 18.1],
+          [78.2, 18.2],
+          [78.1, 18.2],
+          [78.1, 18.1]
+        ]]
+      },
+      "properties": {
+        "name": "Telangana Community Rights Area",
+        "state": "Telangana",
+        "type": "cr",
+        "area_hectares": 450,
+        "claims_total": 180,
+        "claims_granted": 150,
+        "claims_pending": 30,
+        "population": 2200,
+        "tribal_groups": ["Gond", "Kolam", "Pardhan"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [91.1, 23.7],
+          [91.2, 23.7],
+          [91.2, 23.8],
+          [91.1, 23.8],
+          [91.1, 23.7]
+        ]]
+      },
+      "properties": {
+        "name": "Tripura Community Rights Area",
+        "state": "Tripura",
+        "type": "cr",
+        "area_hectares": 400,
+        "claims_total": 160,
+        "claims_granted": 140,
+        "claims_pending": 20,
+        "population": 2400,
+        "tribal_groups": ["Tripuri", "Reang", "Chakma"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.1, 15.1],
+          [74.2, 15.1],
+          [74.2, 15.2],
+          [74.1, 15.2],
+          [74.1, 15.1]
+        ]]
+      },
+      "properties": {
+        "name": "Kerala Community Rights Area",
+        "state": "Kerala",
+        "type": "cr",
+        "area_hectares": 350,
+        "claims_total": 140,
+        "claims_granted": 120,
+        "claims_pending": 20,
+        "population": 2000,
+        "tribal_groups": ["Paniya", "Kuruma", "Adiya"]
+      }
+    }
+  ]
+}
