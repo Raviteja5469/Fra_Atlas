@@ -1,3 +1,6 @@
+"use client"
+
+
 import { Header } from "@/components/header"
 import { AssetClassification } from "@/components/asset-classification"
 import { ValidationTools } from "@/components/validation-tools"
@@ -5,7 +8,18 @@ import { ChangeDetection } from "@/components/change-detection"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Brain, Download, Share2, Map } from "lucide-react"
-import { SatelliteViewer } from "@/components/satellite-viewer"
+// import { SatelliteViewer } from "@/components/satellite-viewer"
+import dynamic from "next/dynamic";
+
+const SatelliteViewer = dynamic(() => import("@/components/satellite-viewer").then(mod => ({ default: mod.SatelliteViewer })), {
+  ssr: false,
+  loading: () => <div>Loading...</div>
+})
+
+
+// const SatelliteViewer = dynamic(() => import("@/components/satellite-viewer"), {
+//   ssr: false,
+// });
 
 
 export default function AIMappingPage() {
@@ -44,14 +58,6 @@ export default function AIMappingPage() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="lg:col-span-2 space-y-6">
-            {/* <Card className="h-[500px] flex items-center justify-center">
-              <div className="text-center">
-                <Map className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
-                <h3 className="text-lg font-semibold mb-2">Satellite Viewer</h3>
-                <p className="text-muted-foreground">AI-powered satellite imagery analysis</p>
-                <p className="text-sm text-muted-foreground mt-2">Coming soon...</p>
-              </div>
-            </Card> */}
             <Card className="h-[800px] overflow-hidden">
               <SatelliteViewer />
             </Card>
