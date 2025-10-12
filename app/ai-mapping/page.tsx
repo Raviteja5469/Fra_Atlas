@@ -55,7 +55,6 @@ export default function AIMappingPage() {
             <Card className="h-[800px] overflow-hidden">
               <SatelliteViewer />
             </Card>
-
           </div>
 
           <div className="space-y-6">
