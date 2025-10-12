@@ -1,9 +1,24 @@
+"use client"
+
 import { Header } from "@/components/header"
-import { MapViewer } from "@/components/map-viewer"
 import { MapLayerControl } from "@/components/map-layer-control"
 import { MapFilters } from "@/components/map-filters"
 import { MapBasemapSelector } from "@/components/map-basemap-selector"
 import { MapAnalytics } from "@/components/map-analytics"
+import dynamic from "next/dynamic"
+
+// Dynamically import MapViewer with SSR disabled to prevent window is not defined error
+const MapViewer = dynamic(() => import("@/components/map-viewer").then(mod => ({ default: mod.MapViewer })), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center bg-muted/20">
+      <div className="text-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent mx-auto mb-2"></div>
+        <p className="text-sm text-muted-foreground">Loading map...</p>
+      </div>
+    </div>
+  )
+})
 
 export default function AtlasPage() {
   return (
