@@ -8,6 +8,7 @@ import { Header } from "@/components/header"
 import { Suspense } from "react"
 import OverflowDebugger from "@/components/overflow-debug"
 import Script from "next/script"
+import FloatingChatbot from "@/components/floating-chatbot"
 
 export const metadata: Metadata = {
   title: "FRA OnePortal",
@@ -32,13 +33,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <div className="overflow-x-hidden">
+        <div className="overflow-x-hidden pt-16">
           <Header />
           <Suspense fallback={null}>
             {children}
             <OverflowDebugger />
           </Suspense>
         </div>
+        <FloatingChatbot />
         <Analytics />
       </body>
     </html>

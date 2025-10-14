@@ -73,7 +73,7 @@ export default function HomePage() {
 
             <motion.p
               variants={childVariants}
-              className="mb-8 text-pretty text-lg text-muted-foreground md:text-xl"
+              className="mb-8 text-white text-pretty text-lg text-muted-foreground md:text-xl"
             >
               Streamlining Forest Rights Act implementation with advanced AI, remote sensing, and WebGIS technology.
             </motion.p>

@@ -118,9 +118,15 @@ export function DocumentResults() {
                   </div>
 
                   <div className="flex gap-2 pt-2">
-                    <Button size="sm" variant="outline" onClick={() => setSelectedDocument(result)}>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() =>
+                        setSelectedDocument((prev) => (prev?.id === result.id ? null : result))
+                      }
+                    >
                       <Eye className="mr-2 h-4 w-4" />
-                      View Details
+                      {selectedDocument?.id === result.id ? "Hide Details" : "View Details"}
                     </Button>
                     <Button size="sm" variant="outline">
                       <Edit className="mr-2 h-4 w-4" />
@@ -131,6 +137,12 @@ export function DocumentResults() {
                       Download
                     </Button>
                   </div>
+
+                  {selectedDocument?.id === result.id && (
+                    <div className="mt-4">
+                      <ExtractedDataViewer overallConfidence={result.confidence} showHeader={false} showActions={false} />
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>
@@ -138,14 +150,6 @@ export function DocumentResults() {
         ))}
       </div>
 
-      <Dialog open={!!selectedDocument} onOpenChange={(open) => !open && setSelectedDocument(null)}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Document Details - {selectedDocument?.name}</DialogTitle>
-          </DialogHeader>
-          {selectedDocument && <ExtractedDataViewer overallConfidence={selectedDocument.confidence} />}
-        </DialogContent>
-      </Dialog>
     </div>
   )
 }
