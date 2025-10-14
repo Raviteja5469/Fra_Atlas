@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { SendHorizonal } from "lucide-react"
+import { SendHorizontal } from "lucide-react"
 
 export default function FloatingChatbot() {
   const pathname = usePathname()
@@ -16,34 +16,41 @@ export default function FloatingChatbot() {
 
   const quick = ["How do I upload documents?", "Show DSS recommendations", "Where is my claimant stuck?"]
 
-  if (pathname === "/") return null
+  const enabled = process.env.NEXT_PUBLIC_CHATBOT_ENABLED !== "false"
 
-  function send() {
+  if (!enabled) return null
+
+  async function send() {
     if (!input.trim()) return
-    setMessages((m) => [
-      ...m,
-      { role: "user", content: input },
-      {
-        role: "assistant",
-        content:
-          "Thanks! I’ll check and get back with steps. Meanwhile, you can browse Analytics → Repository for a quick overview.",
-      },
-    ])
+    const userText = input
     setInput("")
+    setMessages((m) => [...m, { role: "user", content: userText }])
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userText }),
+      })
+      const data = await res.json().catch(() => ({ reply: "Sorry, I couldn't parse a reply." }))
+      const reply = data?.reply || "Thanks! I’ll check and get back with steps."
+      setMessages((m) => [...m, { role: "assistant", content: reply }])
+    } catch {
+      setMessages((m) => [...m, { role: "assistant", content: "Network error. Please try again." }])
+    }
   }
 
   return (
-    <>
+    <div style={{ position: "fixed", bottom: 20, right: 20, zIndex: 2147483647 }} className="pointer-events-auto">
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-50 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg"
+          className="rounded-full bg-gradient-to-r from-primary to-accent px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg"
         >
           Chat • OnePortal
         </button>
       )}
       {open && (
-        <Card className="fixed bottom-5 right-5 z-50 w-80 overflow-hidden shadow-xl">
+        <Card className="w-80 overflow-hidden shadow-xl">
           <div className="flex items-center justify-between bg-muted/50 px-4 py-2">
             <p className="text-sm font-semibold">OnePortal Assistant</p>
             <button className="text-xs text-muted-foreground hover:text-foreground" onClick={() => setOpen(false)}>
@@ -80,11 +87,11 @@ export default function FloatingChatbot() {
               className="flex-1 rounded-md border bg-background px-2 py-1 text-sm"
             />
             <Button size="icon" onClick={send}>
-              <SendHorizonal className="h-4 w-4" />
+              <SendHorizontal className="h-4 w-4" />
             </Button>
           </div>
         </Card>
       )}
-    </>
+    </div>
   )
 }

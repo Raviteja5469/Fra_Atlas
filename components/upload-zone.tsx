@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Upload, FileText, ImageIcon, X } from "lucide-react"
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 interface UploadedFile {
   id: string
@@ -16,17 +16,39 @@ interface UploadedFile {
 
 export function UploadZone() {
   const [files, setFiles] = useState<UploadedFile[]>([])
+  const inputRef = useRef<HTMLInputElement | null>(null)
 
-  const handleFileUpload = () => {
-    const newFile: UploadedFile = {
+  const openPicker = () => inputRef.current?.click()
+
+  const handlePickedFiles = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = event.target.files
+    if (!selected || selected.length === 0) return
+    const file = selected[0]
+    const temp: UploadedFile = {
       id: Math.random().toString(),
-      name: "FRA_Claim_Document_2024.pdf",
-      size: "2.4 MB",
-      type: "pdf",
-      status: "processing",
-      progress: 65,
+      name: file.name,
+      size: `${(file.size / (1024 * 1024)).toFixed(2)} MB`,
+      type: file.type.includes("pdf") ? "pdf" : "image",
+      status: "uploading",
+      progress: 10,
     }
-    setFiles([...files, newFile])
+    setFiles((prev) => [...prev, temp])
+
+    const form = new FormData()
+    form.append("file", file)
+    try {
+      const res = await fetch("/api/repository/upload", { method: "POST", body: form })
+      if (!res.ok) throw new Error("Upload failed")
+      setFiles((prev) => prev.map((f) => (f.id === temp.id ? { ...f, status: "processing", progress: 65 } : f)))
+      // Simulate processing complete
+      setTimeout(() => {
+        setFiles((prev) => prev.map((f) => (f.id === temp.id ? { ...f, status: "completed", progress: 100 } : f)))
+      }, 800)
+    } catch (e) {
+      setFiles((prev) => prev.map((f) => (f.id === temp.id ? { ...f, status: "error", progress: 0 } : f)))
+    } finally {
+      if (inputRef.current) inputRef.current.value = ""
+    }
   }
 
   const removeFile = (id: string) => {
@@ -43,7 +65,8 @@ export function UploadZone() {
           <h3 className="mb-2 text-lg font-semibold">Upload FRA Documents</h3>
           <p className="mb-4 text-center text-sm text-muted-foreground">Drag and drop files here, or click to browse</p>
           <p className="mb-4 text-xs text-muted-foreground">Supports PDF, JPG, PNG (Max 10MB per file)</p>
-          <Button onClick={handleFileUpload}>Select Files</Button>
+          <input ref={inputRef} type="file" accept=".pdf,image/*" className="hidden" onChange={handlePickedFiles} />
+          <Button onClick={openPicker}>Select Files</Button>
         </CardContent>
       </Card>
 

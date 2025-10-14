@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-50 w-full border-b border-border backdrop-blur-sm ${isScrolled ? "bg-primary shadow-md" : "bg-primary"} transition-all duration-300`}
+      className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-border backdrop-blur-sm ${isScrolled ? "bg-primary shadow-md" : "bg-primary"} transition-all duration-300`}
     >
       <div className="container flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
